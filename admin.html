@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlatOK - Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div>FlatOK - Admin Panel</div>
+        <div class="nav">
+            <a id="home-link" href="mainp.html">Home</a>
+            <a href="#">Search</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <button id="theme-toggle" class="button">Toggle Theme</button>
+        </div>
+    </div>
+    <div id="admin" class="main-container">
+        <h1>Admin Panel</h1>
+        <p>Manage users and listings.</p>
+        <div id="welcome-message" class="welcome-message"></div>
+        <div id="auth-buttons"></div>
+        <div id="logout-section" style="text-align: center; margin-top: 20px;"></div>
+        <button id="create-listing-btn" class="button apply-btn" style="display:none;">Create Listing</button>
+        <div class="filter-container">
+            <h3>Filter Users</h3>
+            <div class="filter-group">
+                <label for="user-search">Search Users:</label>
+                <input type="text" id="user-search" placeholder="Enter name or email">
+            </div>
+            <div class="filter-group">
+                <label for="name-sort">Sort by Name:</label>
+                <select id="name-sort">
+                    <option value="none">--Select--</option>
+                    <option value="asc">A-Z</option>
+                    <option value="desc">Z-A</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="date-sort">Sort by Registration:</label>
+                <select id="date-sort">
+                    <option value="none">--Select--</option>
+                    <option value="desc">Newest First</option>
+                    <option value="asc">Oldest First</option>
+                </select>
+            </div>
+            <button id="apply-filters" class="button apply-btn">Apply Filters</button>
+            <button id="reset-filters" class="button apply-btn">Reset Filters</button>
+        </div>
+        <div id="users"></div>
+    </div>
+
+    <div id="create-listing-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="close-modal" class="close">×</span>
+            <h2>Create New Listing</h2>
+            <div id="create-listing-form">
+                <label for="listing-title">Title:</label>
+                <input type="text" id="listing-title" required>
+
+                <label for="listing-description">Description:</label>
+                <textarea id="listing-description"></textarea>
+
+                <label for="listing-city">City:</label>
+                <input type="text" id="listing-city" required>
+
+                <label for="listing-price">Price (EUR):</label>
+                <input type="number" id="listing-price" step="0.01" required>
+
+                <label for="listing-deal-type">Deal Type:</label>
+                <select id="listing-deal-type" required>
+                    <option value="sale">Sale</option>
+                    <option value="rent">Rent</option>
+                </select>
+
+                <label for="listing-rooms">Rooms:</label>
+                <input type="number" id="listing-rooms" required>
+
+                <label for="listing-floor">Floor (optional):</label>
+                <input type="number" id="listing-floor">
+
+                <label for="listing-address">Address (optional):</label>
+                <input type="text" id="listing-address">
+
+                <button id="submit-listing" class="button apply-btn">Submit Listing</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlatOK - Find Your Dream Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div>FlatOK - Find Your Dream Home</div>
+        <div class="nav">
+            <a id="home-link" href="mainp.html">Home</a>
+            <a href="#">Search</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <button id="theme-toggle" class="button">Toggle Theme</button>
+        </div>
+    </div>
+    <div id="mainp" class="main-container">
+        <h1>Welcome to FlatOK</h1>
+        <p>Rent, Buy, or Sell apartments easily and securely.</p>
+        <div class="city-buttons">
+            <button class="city-button" onclick="window.location.href='riga.html'">Riga</button>
+            <button class="city-button" onclick="window.location.href='jelgava.html'">Jelgava</button>
+            <button class="city-button" onclick="window.location.href='daugavpils.html'">Daugavpils</button>
+            <button class="city-button" onclick="window.location.href='liepaja.html'">Liepaja</button>
+            <button class="city-button" onclick="window.location.href='ventspils.html'">Ventspils</button>
+            <button class="city-button" onclick="window.location.href='jurmala.html'">Jurmala</button>
+        </div>
+        <div id="welcome-message"></div>
+        <div id="auth-buttons"></div>
+        <div id="logout-section" style="text-align: center; margin-top: 20px;"></div>
+        <div id="listings"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
