@@ -68,15 +68,7 @@ As an Admin
 Theme Switching
     Click the "Toggle Theme" button in the header to switch between light and dark modes. The preference is saved in localStorage.
 Database Schema
-Table: users
 
-Column	Type	Attributes	Default Value	Description
-User_ID	INT(11)	NOT NULL, AUTO_INCREMENT	-	Unique user ID
-username	VARCHAR(50)	NOT NULL	-	User’s username
-email	VARCHAR(100)	NOT NULL	-	User’s email
-password	VARCHAR(255)	NOT NULL	-	Encrypted password
-Registration_date	DATETIME	DEFAULT CURRENT_TIMESTAMP	-	Registration date
-Role_ID	INT(11)	NOT NULL	-	User role (e.g., 3 for admin)
 API Endpoints
     check-session.php: Checks user session status.
     register.php: Handles user registration.
